@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="cyberpsina.css">
+    </head>
+    <body>
+        <div class="main-wrapper">
+            <div class="top-wrapper">
+                <div id="buff-toggles">
+                    <div class="toggle">
+                        <label class="switch">
+                            <input type="checkbox" id="arcaneCascade">
+                            <span class="slider round"></span>
+                        </label>
+                        <p>Арканный каскад</p>
+                    </div>
+                    <div class="toggle">
+                        <label class="switch">
+                            <input type="checkbox" id="turn">
+                            <span class="slider round"></span>
+                        </label>
+                        <p>Обращение</p>
+                    </div>
+                    <div class="toggle">
+                        <label class="switch">
+                            <input type="checkbox" id="drawTheLightning">
+                            <span class="slider round"></span>
+                        </label>
+                        <p>Притянуть молнию</p>
+                    </div>
+                    <div class="toggle">
+                        <label class="switch">
+                            <input type="checkbox" id="enlarge">
+                            <span class="slider round"></span>
+                        </label>
+                        <p>Увеличение</p>
+                    </div>
+                </div>
+                <div id="splash">
+                    <div class="toggle">
+                        <label class="switch">
+                            <input type="checkbox" id="zoneAttack">
+                            <span class="slider round"></span>
+                        </label>
+                        <p>Атака по площади</p>
+                    </div>
+                </div>
+                <div id="info">
+                    <p>Дополнительные состояния</p>
+                    <ul name="infoList"></ul>
+                </div>
+            </div>
+            <div class="bottom-wrapper">
+                <div id="stats-info">
+                    <div class="stat-info">
+                        <input type="text" name="bonusToHit">
+                        <b>+</b>
+                        <p id="addedbonusToHit">0</p>
+                        <p>Бонус к попаданию</p>
+                    </div>
+                    <div class="stat-info">
+                        <input type="text" name="bonusToDamage">
+                        <b>+</b>
+                        <p id="addedbonusToDamage">0</p>
+                        <p>Бонус к урону</p>
+                    </div>
+                    <div class="stat-info">
+                        <input type="text" name="bonusToDice">
+                        <b>+</b>
+                        <p id="addedbonusToDice">0</p>
+                        <p>Бонус к количеству костей урона</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="cyberpsina.js"></script>
+    </body>
+</html>

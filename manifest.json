@@ -1,0 +1,42 @@
+{
+    "manifest_version": 2,
+    "name": "CyberPsina",
+    "version": "1.0",
+  
+    "description": "Forget those calculations, this will do those for ya.",
+  
+    "icons": {
+      "48": "icons/mask-48.png"
+    },
+
+    "permissions": [
+        "activeTab",
+        "storage",
+        "tabs"
+    ],
+
+    "page_action": {
+        "default_icon": "icons/mask-48.png",
+        "default_title": "CyberPsina",
+        "default_popup": "popup/cyberpsina.html",
+        "show_matches": ["https://app.roll20.net/editor/"]
+    },
+
+    "browser_specific_settings": {
+        "gecko": {
+          "id": "addon@example.com"
+        }
+    },
+
+    "content_scripts": [
+        {
+          "matches": ["https://app.roll20.net/editor/"],
+          "js": ["content/editor-back.js"]
+        },
+        {
+          "matches": ["https://app.roll20.net/editor/character/*"],
+          "js": ["content/charlist-back.js"]
+        }
+      ]
+}
+  
