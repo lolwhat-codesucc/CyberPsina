@@ -14,7 +14,6 @@ function inputHandler(target) {
   switch(target.getElementsByTagName("strong")[0].innerText) {
     case "BONUS TO ROLL:":
       type = "bonusToHit";
-      break;
     case "# УРОН:":
       type = "bonusToDice";
       break;
@@ -38,7 +37,7 @@ function inputHandler(target) {
       console.log("Loading failed");
       return;
     };
-    input.value = parseInt(loadedStats[type]) + baseStats[type] + loadedStats["addedStats"][type];
+    input.value = parseInt(input.value) + parseInt(loadedStats[type]) + baseStats[type] + loadedStats["addedStats"][type];
     button.click();
 
     if(isLastMessage) portFromPopUp.postMessage({
